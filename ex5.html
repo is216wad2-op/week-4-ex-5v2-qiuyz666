@@ -5,13 +5,21 @@
    
     <style>
 
-        #circle {
+         #circle, #square {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
             background-color: goldenrod;
             text-align: center;
+        }
+
+        #circle {
+            border-radius: 50%;
             padding-top: 60px;
+        }
+
+        #square {
+            border-radius: 0;
+            padding-top: 20px;
         }
 
         /* Add CSS code here */ 
@@ -26,6 +34,16 @@
         
         <script>
            // add code here
+
+        function mOver(obj) {
+        obj.id = "square";   // switch to square style
+        obj.textContent = "Square!";
+        }
+
+        function mOut(obj) {
+            obj.id = "circle";   // switch back to circle style
+            obj.textContent = "Mouse Over Me";
+        }
         </script>
                 
 </body>
